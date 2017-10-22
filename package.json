@@ -1,5 +1,5 @@
 {
-  "name": "creatshare-project-quick-init",
+  "name": "creatshare-app-init",
   "version": "2.0.0",
   "description": "CreatShare 实验室前端项目初始化工具",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/creatshare-demos/creatshare-project-quick-init"
+    "url": "https://github.com/creatshare-demos/creatshare-app-init"
   },
   "keywords": [
     "webpack",
@@ -24,9 +24,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mennghao/creatshare-project-quick-init/issues"
+    "url": "https://github.com/creatshare-demos/creatshare-app-init/issues"
   },
-  "homepage": "https://github.com/creatshare-demos/creatshare-project-quick-init",
+  "homepage": "https://github.com/creatshare-demos/creatshare-app-init",
   "dependencies": {
     "commander": "^2.11.0"
   }

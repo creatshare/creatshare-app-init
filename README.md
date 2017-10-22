@@ -1,19 +1,19 @@
-# creatshare-project-quick-init
+# creatshare-app-init
 
-[![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-project-quick-init) [![](https://img.shields.io/npm/l/express.svg)](https://github.com/creatshare-demos/creatshare-project-quick-init/blob/master/LICENSE)
+[![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-app-init) [![](https://img.shields.io/npm/l/express.svg)](https://github.com/creatshare-demos/creatshare-app-init/blob/master/LICENSE)
 
 CreatShare 互联网实验室前端 Web App 项目初始化工具
 
 ## 安装
 
 ```
-➜  npm install -g creatshare-project-quick-init
+➜  npm install -g creatshare-app-init
 ```
 
 或
 
 ```
-➜  yarn global add creatshare-project-quick-init
+➜  yarn global add creatshare-app-init
 ```
 
 ## 运行
