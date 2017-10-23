@@ -1,5 +1,5 @@
 let program = require('commander'),
-	cs = require('../src/cs')
+	cs = require('../lib/cs')
 
 program
 	.allowUnknownOption()
