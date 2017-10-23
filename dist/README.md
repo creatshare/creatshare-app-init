@@ -8,4 +8,4 @@
 
 # CreatShare 互联网实验室
 
-![CreatShare-logo-powerby.png](./CreatShare-logo-powerby.png)
+![CreatShare-logo-powerby.png](./src/images/CreatShare-logo-powerby.png)
