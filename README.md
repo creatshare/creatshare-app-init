@@ -1,6 +1,6 @@
 # creatshare-app-init
 
-[![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-app-init) [![](https://img.shields.io/npm/l/express.svg)](https://github.com/creatshare-demos/creatshare-app-init/blob/master/LICENSE)
+[![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-app-init) [![](https://img.shields.io/badge/eslint-standard-green.svg)](https://eslint.org/) ![](https://img.shields.io/badge/contributors-2-blue.svg) [![](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/creatshare-demos/creatshare-app-init/blob/master/LICENSE)
 
 CreatShare 互联网实验室前端 Web App 项目初始化工具
 
@@ -16,22 +16,32 @@ CreatShare 互联网实验室前端 Web App 项目初始化工具
 ➜  yarn global add creatshare-app-init
 ```
 
-## 运行
+## 命令手册
+
+示例
 
 ```
 ➜  cs create <project-name> # 使用 cs 脚手架快速创建一个最小化 Web App 项目
 ```
 
-说明如下
-
-* 执行 ```cs creatshare <APPNAME>``` 脚手架命令之后，Web App 项目结构已经生成。
-* 进入 ```<APPNAME>``` 目录进行 ```npm install``` 或 ```yarn``` 来安装项目所需依赖。
-* 依赖安装之后，输入 ```npm start``` 或 ```yarn start``` 创建一个本地 server, 并自动打开浏览器，实时预览。
+具体内容
 
 ```
-➜  cs -V # --version  # 查看 cs 版本号
-➜  cs -e # --enjoy    # 尽情的享受 cs 脚手架吧
-➜  cs -h # --help     # 打印 cs 帮助手册
+ Usage: cs [options] [command]
+
+ CreatShare 互联网实验室前端 Web App 项目脚手架
+
+
+ Options:
+
+    -V, --version  output the version number
+    -e, --enjoy
+    -h, --help     output usage information
+
+
+ Commands:
+
+    create <dir>  创建一个新的 Web App 项目骨架
 ```
 
 ## 结构
@@ -70,6 +80,10 @@ CreatShare 互联网实验室前端 Web App 项目初始化工具
     ├── style            # 样式文件资源目录
     └── app.js           # 源码入口文件
 ```
+
+# 贡献
+
+欢迎你的 PR
 
 # 开源协议
 

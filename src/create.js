@@ -3,10 +3,10 @@ let fs = require('fs')
 const miscFiles = ['.DS_Store']
 
 const createRootDir = (rootDir) => {
-  fs.access(process.cwd(), function(err){
+  fs.access(process.cwd(), function (err) {
     if (err) {
       // 目录不存在时创建目录
-      fs.mkdirSync(rootDir);
+      fs.mkdirSync(rootDir)
     }
   })
 }
@@ -18,30 +18,30 @@ const createRootDir = (rootDir) => {
  * @return {[type]}      [description]
  */
 const copyDir = (src, dist) => {
-  fs.access(dist, function(err){
+  fs.access(dist, function (err) {
     if (err) {
       // 目录不存在时创建目录
-      fs.mkdirSync(dist);
+      fs.mkdirSync(dist)
     }
-    _copy(null, src, dist);
+    _copy(null, src, dist)
   })
 
-  function _copy(err, src, dist) {
+  function _copy (err, src, dist) {
     if (err) { throw err }
-    fs.readdir(src, function(err, files) {
-      if (err){ throw err }
+    fs.readdir(src, function (err, files) {
+      if (err) { throw err }
       // 过滤不生成的文件
       miscFiles.forEach(function (v) {
         if (!files.includes(v)) return
         files = files.filter(function (k) {
-          return k != v
+          return k !== v
         })
       })
       // 遍历目录中的文件
-      files.forEach(function(path) {
+      files.forEach(function (path) {
         var _src = src + '/' + path
         var _dist = dist + '/' + path
-        fs.stat(_src, function(err, st) {
+        fs.stat(_src, function (err, st) {
           if (err) { throw err }
           // 判断是文件还是目录
           if (st.isFile()) {
