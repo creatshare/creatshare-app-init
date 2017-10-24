@@ -2,7 +2,7 @@ let fs = require('fs')
 // 不生成的文件
 const miscFiles = ['.DS_Store']
 
-createRootDir = (rootDir) => {
+const createRootDir = (rootDir) => {
   fs.access(process.cwd(), function(err){
     if (err) {
       // 目录不存在时创建目录
@@ -17,7 +17,7 @@ createRootDir = (rootDir) => {
  * @param  {[type]} dist [当前终端所在目录]
  * @return {[type]}      [description]
  */
-copyDir = (src, dist) => {
+const copyDir = (src, dist) => {
   fs.access(dist, function(err){
     if (err) {
       // 目录不存在时创建目录

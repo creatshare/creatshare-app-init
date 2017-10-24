@@ -1,17 +1,12 @@
-let program = require('commander'),
-	cs = require('../lib/cs')
+'use strict';
 
-program
-	.allowUnknownOption()
-	.version('2.0.0')
-	.description('CreatShare 互联网实验室前端 Web App 项目脚手架')
-	.option('-e, --enjoy')
+var program = require('commander'),
+    cs = require('../lib/cs');
 
-program
-   .command('create <dir>')
-   .description('创建一个新的 Web App 项目骨架')
-   .action(function(rootDir) {
-	   cs.create(rootDir)
-   })
+program.allowUnknownOption().version('2.0.0').description('CreatShare 互联网实验室前端 Web App 项目脚手架').option('-e, --enjoy');
 
-program.parse(process.argv)
+program.command('create <dir>').description('创建一个新的 Web App 项目骨架').action(function (rootDir) {
+	cs.create(rootDir);
+});
+
+program.parse(process.argv);
