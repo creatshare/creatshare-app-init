@@ -1,4 +1,5 @@
-#hello {
+#root {
 	color: #509dd7;
-	text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
