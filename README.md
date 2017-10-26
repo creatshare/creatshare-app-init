@@ -2,6 +2,8 @@
 
 [![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-app-init) [![](https://img.shields.io/badge/eslint-standard-green.svg)](https://eslint.org/) ![](https://img.shields.io/badge/contributors-2-blue.svg) [![](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/creatshare-demos/creatshare-app-init/blob/master/LICENSE)
 
+![](./img/robot.png)
+
 CreatShare 互联网实验室前端 Web App 项目初始化工具
 
 ## 安装
@@ -91,4 +93,4 @@ CreatShare 互联网实验室前端 Web App 项目初始化工具
 
 # CreatShare 互联网实验室
 
-![CreatShare-logo-powerby.png](./CreatShare-logo-powerby.png)
+![CreatShare-logo-powerby.png](./img/CreatShare.png)
