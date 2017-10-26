@@ -1,6 +1,6 @@
 {
   "name": "creatshare-app-init",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "CreatShare 实验室前端项目初始化工具",
   "main": "index.js",
   "bin": {

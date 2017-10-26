@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -32,7 +33,7 @@ htmls.forEach((pageName) => {
       removeComments: false, // 移除 HTML 中的注释
       collapseWhitespace: false // 删除空白符与换行符
     },
-    chunks: [pageName, 'commons']
+    chunks: [pageName, 'common']
   })
   HTMLPlugins.push(htmlPlugin)
   entries[pageName] = path.resolve(__dirname, `src/script/entryjs/${pageName}.js`)
@@ -49,7 +50,10 @@ module.exports = {
   // 插件项
   plugins: [
     new CleanWebpackPlugin(['build']), // 每次打包时清除旧的打包文件
-    new ExtractTextPlugin('src/style/*.css'),
+    new ExtractTextPlugin('style/[name].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common'
+    }),
     ...HTMLPlugins
   ],
   // 加载器配置,告知 webpack 每一种文件都需要使用什么加载器来处理
