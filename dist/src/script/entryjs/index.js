@@ -1,5 +1,5 @@
-import '../image/robot.png'
-import '../style/index.css'
+import '../../image/robot.png'
+import '../../style/index.css'
 
 import printMe from '../commonjs/printMe.js'
 

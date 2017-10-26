@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ROOT_PATH = path.resolve(__dirname)
 const BUILD_PATH = path.resolve(ROOT_PATH, 'build') // 发布文件所存放的目录
 
-let entries = ['./index.js'] // 入口文件集合
+let entries = {} // 入口文件集合
 let HTMLPlugins = [] // HTML 插件集合
 
 // 获取所有 html 入口页面
@@ -35,7 +35,7 @@ htmls.forEach((pageName) => {
     chunks: [pageName, 'commons']
   })
   HTMLPlugins.push(htmlPlugin)
-  entries[pageName] = path.resolve(__dirname, `src/js/entryjs/${pageName}.js`)
+  entries[pageName] = path.resolve(__dirname, `src/script/entryjs/${pageName}.js`)
 })
 
 module.exports = {
@@ -44,7 +44,7 @@ module.exports = {
   // 入口文件输出配置
   output: {
     path: BUILD_PATH, // 编译到 build 目录
-    filename: 'js/[name].bundle.js'// 编译后的文件名字
+    filename: 'script/[name].bundle.js'// 编译后的文件名字
   },
   // 插件项
   plugins: [
@@ -68,23 +68,16 @@ module.exports = {
           }]
         })
       },
-      // {
-      //   // .js 文件使用 babel 来编译处理
-      //   test: /\.js$/,
-      //   exclude: /^node_modules$/,
-      //   loader: 'babel-loader',
-      //   query: {
-      //     presets: ['es2015']
-      //   },
-      //   include: [SRC_PATH]
-      // },
-      // {
-      //   // .scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
-      //   test: /\.scss$/,
-      //   exclude: /^node_modules$/,
-      //   loader: 'style!css!sass?sourceMap',
-      //   include: [SRC_PATH]
-      // },
+      {
+        // .js 文件使用 babel 来编译处理
+        test: /\.js$/,
+        exclude: /^node_modules$/,
+        include: path.resolve(__dirname, `src/script/`),
+        use: {
+          loader: 'babel-loader',
+          options: { presets: ['es2015', 'stage-2'] }
+        }
+      },
       {
         // 图片文件使用 url-loader 来处理，小于8kb的直接转为base64
         test: /\.(png|jpg)$/,
@@ -93,7 +86,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'img/'
+            outputPath: 'image/'
           }
         }
       }
