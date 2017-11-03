@@ -1,8 +1,7 @@
 {
   "name": "creatshare-app-init",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "CreatShare 实验室前端项目初始化工具",
-  "main": "index.js",
   "bin": {
     "cs": "bin/index.js"
   },
@@ -20,8 +19,8 @@
     "webpack",
     "esint"
   ],
-  "author": "mennghao",
   "contributors": [
+    "mennghao",
     "icorvoh <icorvoh@gmail.com> (https://github.com/icorvoh)"
   ],
   "license": "MIT",

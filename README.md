@@ -1,7 +1,7 @@
 # creatshare-app-init
 
 [![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-app-init) [![](https://img.shields.io/badge/eslint-standard-green.svg)](https://eslint.org/) ![](https://img.shields.io/badge/contributors-2-blue.svg) [![](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/creatshare-demos/creatshare-app-init/blob/master/LICENSE)
-[![](https://img.shields.io/badge/version-v2.1.0-yellow.svg)](https://www.npmjs.com/package/creatshare-app-init)
+[![](https://img.shields.io/badge/version-v2.1.1-yellow.svg)](https://www.npmjs.com/package/creatshare-app-init)
 
 ![](./img/robot.png)
 
